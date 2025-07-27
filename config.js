@@ -33,7 +33,7 @@ PREFIX: process.env.PREFIX || ".",
 // add your prifix for bot   
 BOT_NAME: process.env.BOT_NAME || "𝐅𝐋𝐄𝐗 𝐀𝐈",
 // add bot namw here for menu
-STICKER_NAME: process.env.STICKER_NAME || "𝐅𝐋𝐄𝐗 𝐀𝐈",
+STICKER_NAME: process.env.STICKER_NAME || "FLEX-AI",
 // type sticker pack name 
 CUSTOM_REACT: process.env.CUSTOM_REACT || "false",
 // make this true for custum emoji react    
