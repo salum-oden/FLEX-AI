@@ -1,8 +1,8 @@
 {
-  "name": "𝐅𝐋𝐄𝐗 𝐀𝐈",
+  "name": "FLEX-AI",
   "description": "An Advanced Whatsapp bot 🚀 built for fast automation, media tool, and smooth group management developed by Allan Davincs",
   "logo": "https://files.catbox.moe/a44m93.jpg",
-  "keywords": ["𝐅𝐋𝐄𝐗 𝐀𝐈"],
+  "keywords": ["FLEX-AI"],
   "success_url": "/",
 
     "stack": "container",
@@ -16,7 +16,7 @@
     "STICKER_NAME": {
       "description": "type your sticker pack name.",
       "required": false,
-      "value": "𝐅𝐋𝐄𝐗 𝐀𝐈"
+      "value": "FLEX-AI"
     }, 
       
     "PREFIX": {
