@@ -1,4 +1,4 @@
-// DAUDY MLILA17 - 𝑭𝑳𝑬𝑿 𝑨𝑰 
+//Allan- davincs- 𝑭𝑳𝑬𝑿 𝑨𝑰 
 // Dont Remove Credit From File 
 
 const { cmd } = require("../command");
