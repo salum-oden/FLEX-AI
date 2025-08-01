@@ -19,32 +19,34 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
 let dec = `
 ┏━━━━━━━━━━━━━━━━━━━━━━━┓
-┃      ⚙️  𝗗𝗠𝗟-𝗠𝗗 𝗦𝗨𝗣𝗣𝗢𝗥𝗧 𝗜𝗡𝗙𝗢      
+┃      ⚙️  ғʟᴇx ᴀɪ sᴜᴘᴘᴏʀᴛ ɪɴғᴏ      
 ┗━━━━━━━━━━━━━━━━━━━━━━━┛
 
-👑 *Creator:* ᴅᴀᴜᴅɪ ᴍᴜꜱᴀ ᴍʟɪʟᴀ 🇹🇿  
-🧠 *Bot Name:* ᴅᴍʟ-ᴍᴅ  
-🔧 *Mode:* ${config.MODE}  
-🪄 *Prefix:* ${config.PREFIX}  
+👑 *𝑫𝒆𝒗𝒆𝒍𝒐𝒑𝒆𝒓:* 𝐀𝐥𝐥𝐚𝐧 𝐃𝐚𝐯𝐢𝐧𝐜𝐬 🇹🇿  
+🧠 *𝑩𝒐𝒕 𝒏𝒂𝒎𝒆:* 𝐅𝐋𝐄𝐗_𝐀𝐈  
+🔧 *𝑴𝒐𝒅𝒆:* ${config.MODE}  
+🪄 *𝑷𝒓𝒆𝒇𝒊𝒙:* ${config.PREFIX}  
 💾 *RAM:* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB  
-⚡ *Version:* V.5.0  
-⏱ *Uptime:* ${runtime(process.uptime())}
+⚡ *𝑽𝒆𝒓𝒔𝒊𝒐𝒏:* V.5.0  
+⏱ *𝚞𝚙𝚝𝚒𝚖𝚎:* ${runtime(process.uptime())}
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━┓
 ┃     🌐 𝗢𝗙𝗙𝗜𝗖𝗜𝗔𝗟 𝗟𝗜𝗡𝗞𝗦     
 ┗━━━━━━━━━━━━━━━━━━━━━━━┛
 
-📣 *WhatsApp Channel:*  
-🔗 https://whatsapp.com/channel/0029Vb2hoPpDZ4Lb3mSkVI3C
+📣 𝖶𝗁𝖺𝗍𝗌𝖺𝗉𝗉 𝖼𝗁𝖺𝗇𝗇𝖾𝗅
+
+https://whatsapp.com/channel/0029VakSTEQGZNCk6CqE9E2P
 
 👥 *WhatsApp Group:*  
-🔗 https://chat.whatsapp.com/FunyTxSwaKI7E5Q4z8YGbS
+🔗 https://chat.whatsapp.com/FbxfPXPLRlGJe1egJ8mivf
+
 
 📩 *Support Contact:*  
 🔗 wa.me/+255?text=Support!
 
 ┏━━━━━━━━━━━━━━━━━━━━━━━┓
-┃   🔴  𝗗𝗠𝗟-𝗠𝗗 | _Simplicity Meets Power_  
+┃   🔴  𝔽𝕃𝔼𝕏_𝔸𝕀 | Meets clever  
 ┗━━━━━━━━━━━━━━━━━━━━━━━┛
 ${readMore}
 `;
@@ -52,7 +54,7 @@ ${readMore}
 await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/tjt2z2.jpg` },
+                image: { url: `https://files.catbox.moe/4q6vth.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -60,7 +62,7 @@ await conn.sendMessage(
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363318767880951@newsletter',
-                        newsletterName: '『 DAVINCS-TECH  』',
+                        newsletterName: '『𝐹𝐿𝐸𝑋-𝐴𝐼-𝐶𝑂𝑅𝐸』',
                         serverMessageId: 143
                     }
                 }
