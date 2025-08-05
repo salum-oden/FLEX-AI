@@ -79,7 +79,13 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 │➽ tagall  
 │➽ tagadmins  
 ┗▣
-
+┏▣ ◈ 𝐅𝐋𝐄𝐗 𝐆𝐀𝐌𝐄𝐒 ◈
+│➽ konami  
+│➽ squidgame  
+│➽ endgame  
+│➽ guess  
+│➽ numbergame  
+┗▣
 ┏▣ ◈ 𝐑𝐄𝐀𝐂𝐓𝐈𝐎𝐍 𝐌𝐄𝐍𝐔 ◈
 │➽ bully  
 │➽ cuddle  
