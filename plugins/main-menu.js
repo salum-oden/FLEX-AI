@@ -210,14 +210,18 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 │➽ readmore  
 ┗▣
 ┏▣ ◈ 𝐂𝐎𝐍𝐓𝐑𝐎𝐋 𝐌𝐄𝐍𝐔 ◈
-│➽ .autoreact on/off  
-│➽ .mode private/public  
-│➽ .auto_status_seen on/off  
-│➽ .antidelete on/off  
-│➽ .welcome on/off  
-│➽ .prefix (set prefix)  
-│➽ .antilink on/off  
-│➽ .auto_status_react on/off  
+│➽ autoreact on/off  
+│➽ mode private/public  
+│➽ auto_status_seen on/off  
+│➽ antidelete on/off  
+│➽ welcome on/off  
+│➽ prefix (set prefix)  
+│➽ antilink on/off  
+│➽ auto_status_react on/off  
+│➽ always_online on/off
+│➽ auto_typing on/off
+│➽ auto_recording on/off
+│➽ auto_sticker on/off
 ┗▣
 
 ┏▣ ◈ 𝐀𝐈 𝐌𝐄𝐍𝐔 ◈
