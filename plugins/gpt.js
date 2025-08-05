@@ -59,7 +59,7 @@ const mistral = async (m, Matrix) => {
 const cmd = m.body.startsWith(prefix) ? m.body.slice(prefix.length).split(' ')[0].toLowerCase() : '';
 const prompt = m.body.slice(prefix.length + cmd.length).trim();
 
-    const validCommands = ['ai', 'gpt', 'mistral'];
+    const validCommands = ['ai', 'gpt', 'mistral', 'flex' ,'flex2'];
 
     if (validCommands.includes(cmd)) {
         if (!prompt) {
