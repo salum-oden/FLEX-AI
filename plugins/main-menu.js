@@ -10,19 +10,19 @@ cmd({
     use: '.menu',
     desc: "Show all bot commands",
     category: "menu",
-    react: "⤵️",
+    react: "🤖",
     filename: __filename
 }, 
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
-        let dec = ` ╭━━━━━〔𝑭𝑳𝑬𝑿-𝑪𝑶𝑹𝑬〕━━━━╮
+        let dec = ` ╭━━━━━〔𝐅𝐋𝐄𝐗-𝐀𝐈〕━━━━╮
 ┃ 👑 Owner      : ${config.OWNER_NAME}
 ┃ ⚙️ Prefix     : [${config.PREFIX}]
 ┃ 🌐 Platform   : HERUKO
 ┃ 📦 Version    : 4.0.0
 ┃ ⏱️ Runtime    : ${runtime(process.uptime())}
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
-┏▣ ◈ᴅᴏᴡɴʟᴏᴀᴅ ᴍᴇɴᴜ◈
+┏▣ 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃 𝐌𝐄𝐍𝐔♥
 │➽ facebook  
 │➽ twitter  
 │➽ img  
@@ -49,8 +49,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 │➽ video2  
 │➽ song  
 ┗▣
-
-┏▣ ◈ɢʀᴏᴜᴘ ᴍᴇɴᴜ◈
+  【𝐆𝐑𝐎𝐔𝐏 𝐌𝐄𝐍𝐔】
 │➽ grouplink  
 │➽ add  
 │➽ remove  
@@ -81,7 +80,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 │➽ tagadmins  
 ┗▣
 
-┏▣ ◈ ʀᴇᴀᴄᴛɪᴏɴ ᴍᴇɴᴜ ◈
+┏▣ ◈ 𝐑𝐄𝐀𝐂𝐓𝐈𝐎𝐍 𝐌𝐄𝐍𝐔 ◈
 │➽ bully  
 │➽ cuddle  
 │➽ cry  
@@ -189,7 +188,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 │➽ hifi  
 ┗▣
 
-┏▣ ◈𝐂𝐎𝐍𝐕𝐄𝐑𝐓 𝐌𝐍◈
+┏▣ ◈𝐂𝐎𝐍𝐕𝐄𝐑𝐓 𝐌𝐄𝐍𝐔◈
 │➽ sticker  
 │➽ sticker2  
 │➽ emojimix  
@@ -209,6 +208,16 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 │➽ repeat  
 │➽ ask  
 │➽ readmore  
+┗▣
+┏▣ ◈ 𝐂𝐎𝐍𝐓𝐑𝐎𝐋 𝐌𝐄𝐍𝐔 ◈
+│➽ .autoreact on/off  
+│➽ .mode private/public  
+│➽ .auto_status_seen on/off  
+│➽ .antidelete on/off  
+│➽ .welcome on/off  
+│➽ .prefix (set prefix)  
+│➽ .antilink on/off  
+│➽ .auto_status_react on/off  
 ┗▣
 
 ┏▣ ◈ 𝐀𝐈 𝐌𝐄𝐍𝐔 ◈
@@ -292,7 +301,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 │➽ githubstalk  
 │➽ yts  
 │➽ ytv  
-┗▣*2025*𝓕𝓛𝓔𝓧 𝓒𝓞𝓡𝓔
+┗▣ 2025 𝐅𝐋𝐄𝐗𝐈𝐍𝐆🤪
 ━━━━━━━━━━━━━━━
 
 
