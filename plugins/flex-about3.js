@@ -112,7 +112,7 @@ Logo Menu
         await conn.sendMessage(
             from,
             {
-                image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/a44m93.jpg' },
+                image: { url:'https://files.catbox.moe/a44m93.jpg' },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
