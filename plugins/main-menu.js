@@ -252,17 +252,17 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
 ┏▣ ◈𝐌𝐀𝐈𝐍 𝐌𝐄𝐍𝐔◈
 │➽ ping  
-│➽ ping2  
+│➽ help  
 │➽ speed  
-│➽ live  
+│➽ restart  
 │➽ alive  
 │➽ runtime  
 │➽ uptime  
 │➽ repo  
 │➽ owner  
 │➽ menu  
-│➽ menu2  
-│➽ restart  
+│➽ help  
+│➽ update  
 ┗▣
 
 ┏▣ ◈ 𝐀𝐍𝐈𝐌𝐄 𝐌𝐄𝐍𝐔◈
