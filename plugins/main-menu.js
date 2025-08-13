@@ -49,7 +49,8 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 │➽ video2  
 │➽ song  
 ┗▣
-  【𝐆𝐑𝐎𝐔𝐏 𝐌𝐄𝐍𝐔】
+
+  【𝐆𝐑𝐎𝐔𝐏 𝐌𝐄𝐍𝐔】  
 │➽ grouplink  
 │➽ add  
 │➽ remove  
@@ -241,7 +242,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 │➽ luma  
 │➽ dj  
 │➽ flex  
-│➽ flex2  
+│➽ help  
 │➽ gpt4  
 │➽ bing  
 │➽ imagine  
