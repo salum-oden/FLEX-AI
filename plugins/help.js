@@ -128,7 +128,7 @@ Stay FLEXing, stay winning, and remember… when it’s FLEX, it’s always NEXT
         await conn.sendMessage(
             from,
             {
-                image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/4q6vth.jpg' },
+                image: { url: 'https://files.catbox.moe/4q6vth.jpg' },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
