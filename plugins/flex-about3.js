@@ -106,7 +106,11 @@ Logo Menu
 
 .autoreact on → Start auto-reacting to messages
 
-.calculate 12*45 → Instant math answer⊷
+.calculate 12*45 → Instant math answer
+
+🌟 *WORLD SAY'S*🌟
+FLEX-AI gives you the edge — fast, smart, and playful.
+Rule your chats, create your designs, and never miss a beat… that’s the power of FLEX!" ✨
 > ${config.DESCRIPTION}`;
 
         await conn.sendMessage(
