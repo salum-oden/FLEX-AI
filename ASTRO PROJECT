@@ -1,0 +1,160 @@
+<?php
+session_start();
+
+// ------------------ DATABASE CONNECTION ------------------
+$host = "localhost";
+$user = "root";   // your MySQL username
+$pass = "";       // your MySQL password
+$db   = "school_management";
+
+$conn = mysqli_connect($host, $user, $pass, $db);
+if (!$conn) {
+    die("Database connection failed: " . mysqli_connect_error());
+}
+
+// ------------------ LOGIN HANDLER ------------------
+if (isset($_POST['login'])) {
+    $username = $_POST['username'];
+    $password = md5($_POST['password']); 
+
+    $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) == 1) {
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['username'] = $row['username'];
+        $_SESSION['role'] = $row['role'];
+    } else {
+        $error = "Invalid login!";
+    }
+}
+
+// ------------------ LOGOUT ------------------
+if (isset($_GET['logout'])) {
+    session_destroy();
+    header("Location: school.php");
+    exit();
+}
+
+// ------------------ ADMIN: DELETE USER ------------------
+if (isset($_GET['delete']) && $_SESSION['role'] == 'admin') {
+    $id = $_GET['delete'];
+    mysqli_query($conn, "DELETE FROM users WHERE id=$id");
+    header("Location: school.php");
+}
+
+// ------------------ ADMIN: ADD USER ------------------
+if (isset($_POST['add_user']) && $_SESSION['role'] == 'admin') {
+    $username = $_POST['username'];
+    $password = md5($_POST['password']);
+    $role = $_POST['role'];
+    mysqli_query($conn, "INSERT INTO users (username, password, role) VALUES ('$username','$password','$role')");
+    header("Location: school.php");
+}
+
+// ------------------ ADMIN: EDIT USER ------------------
+if (isset($_POST['edit_user']) && $_SESSION['role'] == 'admin') {
+    $id = $_POST['id'];
+    $username = $_POST['username'];
+    $role = $_POST['role'];
+
+    if (!empty($_POST['password'])) {
+        $password = md5($_POST['password']);
+        mysqli_query($conn, "UPDATE users SET username='$username', password='$password', role='$role' WHERE id=$id");
+    } else {
+        mysqli_query($conn, "UPDATE users SET username='$username', role='$role' WHERE id=$id");
+    }
+    header("Location: school.php");
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School Management System</title>
+    <style>
+        body { font-family: Arial; margin: 40px; }
+        form { margin: 10px 0; }
+        input, select, button { margin: 5px; padding: 8px; }
+        table { border-collapse: collapse; width: 70%; margin-top: 20px; }
+        th, td { border: 1px solid black; padding: 8px; text-align: center; }
+        nav a { margin: 0 10px; }
+    </style>
+</head>
+<body>
+
+<?php if (!isset($_SESSION['username'])) { ?>
+    <!-- ------------------ LOGIN PAGE ------------------ -->
+    <h2>Login</h2>
+    <form method="post">
+        <input type="text" name="username" placeholder="Enter Username" required>
+        <input type="password" name="password" placeholder="Enter Password" required>
+        <button type="submit" name="login">Login</button>
+    </form>
+    <?php if(isset($error)) echo "<p style='color:red;'>$error</p>"; ?>
+
+<?php } else { ?>
+    <!-- ------------------ DASHBOARD ------------------ -->
+    <h1>Welcome, <?php echo $_SESSION['username']; ?>!</h1>
+    <h3>Role: <?php echo ucfirst($_SESSION['role']); ?></h3>
+
+    <nav>
+        <a href="school.php">Dashboard</a>
+        <?php if ($_SESSION['role'] == 'admin') echo '<a href="school.php?manage=users">Manage Users</a>'; ?>
+        <a href="school.php?logout=1">Logout</a>
+    </nav>
+
+    <?php if (isset($_GET['manage']) && $_GET['manage'] == 'users' && $_SESSION['role'] == 'admin') { ?>
+        <!-- ------------------ ADMIN: MANAGE USERS ------------------ -->
+        <h2>User Management</h2>
+
+        <!-- Add User Form -->
+        <form method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <select name="role" required>
+                <option value="admin">Admin</option>
+                <option value="teacher">Teacher</option>
+                <option value="student">Student</option>
+                <option value="parent">Parent</option>
+            </select>
+            <button type="submit" name="add_user">Add User</button>
+        </form>
+
+        <!-- List Users -->
+        <table>
+            <tr>
+                <th>ID</th><th>Username</th><th>Role</th><th>Action</th>
+            </tr>
+            <?php
+            $result = mysqli_query($conn, "SELECT * FROM users");
+            while($row = mysqli_fetch_assoc($result)) { ?>
+            <tr>
+                <td><?= $row['id'] ?></td>
+                <td><?= $row['username'] ?></td>
+                <td><?= $row['role'] ?></td>
+                <td>
+                    <!-- Edit Form -->
+                    <form method="post" style="display:inline-block;">
+                        <input type="hidden" name="id" value="<?= $row['id'] ?>">
+                        <input type="text" name="username" value="<?= $row['username'] ?>" required>
+                        <input type="password" name="password" placeholder="New Password">
+                        <select name="role" required>
+                            <option value="admin" <?= $row['role']=='admin'?'selected':'' ?>>Admin</option>
+                            <option value="teacher" <?= $row['role']=='teacher'?'selected':'' ?>>Teacher</option>
+                            <option value="student" <?= $row['role']=='student'?'selected':'' ?>>Student</option>
+                            <option value="parent" <?= $row['role']=='parent'?'selected':'' ?>>Parent</option>
+                        </select>
+                        <button type="submit" name="edit_user">Update</button>
+                    </form>
+                    <!-- Delete Link -->
+                    <a href="school.php?delete=<?= $row['id'] ?>" onclick="return confirm('Delete user?')">Delete</a>
+                </td>
+            </tr>
+            <?php } ?>
+        </table>
+    <?php } ?>
+<?php } ?>
+
+</body>
+</html>
